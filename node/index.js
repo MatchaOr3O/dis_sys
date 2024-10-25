@@ -33,7 +33,7 @@ app.get('/api/all', async (req, res) => {
     try {
         const response = await client.query(`SELECT * FROM users`);
         if(response){
-            response.status(200).send(response.rows);
+            res.status(200).send(response.rows);
         }
     }
     catch (error){
