@@ -4,8 +4,8 @@ const GetAllUser = () => {
     const [users, setAllUser] = useState();
     useEffect(() => {
         axios.get("http://localhost:8080/api/all")
-        .then((response) => setAllUser(response.data))
-        .catch((err) => {console.error(err)});
+             .then((response) => setAllUser(response.data))
+             .catch((err) => {console.error(err)});
     },[]); //強制觸發一次Effect
 
     return (
@@ -25,3 +25,6 @@ const GetAllUser = () => {
     );
 
 };
+
+
+export default GetAllUser;
