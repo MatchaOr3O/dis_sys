@@ -60,7 +60,9 @@ services:
     enviroment:
       - POSTGRES_ PASSWORD=1234
     ports: 
-      - "5432:5432"
+      - POSTGRES_ PASSWORD=12345
+      - POSTGRES_ USER=postgres
+      - POSTGRES_ DB=postgres
     networks:
       - node-network
 
